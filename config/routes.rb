@@ -15,12 +15,12 @@ Rails.application.routes.draw do
   delete '/login',           to: 'login#remove_id'
 
   get '/links/new',          to: 'links#new_link_form'
-  post '/links',             to: 'link#post_new_link'
-  get '/link/:id',           to: 'link#to_link',  as: 'link_id'   
-  delete '/link/:id',        to: 'link#delete'
+  post '/links',             to: 'links#post_new_link'
+  get '/link/:id',           to: 'links#to_link',  as: 'link_id'
+  delete '/link/:id',        to: 'links#delete'
 
-  get '/link/:id/comments',  to: 'link#link_page', as: 'link_comments'
-  post '/link/:id/comments', to: 'link#new_comment'
+  get '/link/:id/comments',  to: 'links#link_page', as: 'link_comments'
+  post '/link/:id/comments', to: 'links#new_comment'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
