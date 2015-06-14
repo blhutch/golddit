@@ -1,12 +1,13 @@
 class LinksController < ApplicationController
   def show
-    @link = Link.find_by(shortened: params[:shortr])
-    redirect_to @link.destination
+    @link = Link.find(params[:user_id])
+    render :show
   end
 
   def index
-    link = params[:page] || 1
+    link = params[:index] || 1
     @links = self.get_page(link)
+    render :links
   end
 
   protected

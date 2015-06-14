@@ -1,0 +1,6 @@
+<div class="post">
+  <h2><%= link_to_unless_current post.title, post_path(post) %></h2>
+  <h3>Written on: <%= link_to_unless_current post.written_at, post_path(post) %></h3>
+
+  <%= simple_format(post.content) %>
+</div>
