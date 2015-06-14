@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post '/login',             to: 'login#login_id'
   delete '/login',           to: 'login#remove_id'
 
+  get '/links', to: 'links#index'
   get '/links/new',          to: 'links#new_link_form'
   post '/links',             to: 'links#post_new_link'
   get '/link/:id',           to: 'links#to_link',  as: 'link_id'
