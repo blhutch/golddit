@@ -32,7 +32,6 @@
     <div class="main-content col-xs-10">
 >>>>>>> upstream/master
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
     </div>
   </div>
 </div>

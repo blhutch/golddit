@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   post '/link/:id/comments', to: 'links#new_comment'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
+  resources :users
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
