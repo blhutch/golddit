@@ -10,14 +10,9 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   root to: 'links#index'
 
-  get '/users/new',          to: 'users#signup_form'
-  post '/users',             to: 'users#signup'
+  
 
-  get '/login',              to: 'login#login'
-  post '/login',             to: 'login#login_id'
-  delete '/login',           to: 'login#remove_id'
-
-  get '/links', to: 'links#index'
+  get '/links',              to: 'links#index'
   get '/links/new',          to: 'links#new_link_form'
   post '/links',             to: 'links#post_new_link'
   get '/link/:id',           to: 'links#to_link',  as: 'link_id'
